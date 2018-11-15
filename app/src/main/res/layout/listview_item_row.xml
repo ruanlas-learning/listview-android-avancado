@@ -2,10 +2,29 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    android:weightSum="100">
+    <!--
+        A propiedade [ android:weightSum="100" ] define uma referência da proporção
+        total do layout. Desta forma, a somatória da proporção de todos os componentes
+        contidos neste layout não deve passar o valor estiplado nesta propiedade.
+    -->
 
     <ImageView
         android:id="@+id/image"
-        android:layout_width="1dp"
-        android:layout_height="wrap_content" />
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_launcher"
+        android:layout_weight="30"/>
+    <!--
+        A propiedade [ android:layout_weight="30" ] define a proporção de espaço que o
+        componente irá ocupar dentro do layout. Neste caso, como a propiedade do layout
+        [ android:weightSum ] está definida como '100', este objeto ocupará um espaço
+        de 30/100 (30%).  Para isso, a propriedade 'layout_width' precisa estar com'0dp' .
+     -->
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="70"/>
+
 </LinearLayout>
