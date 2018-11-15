@@ -1,5 +1,6 @@
 package com.example.ruan.listview;
 
+import android.content.Context;
 import android.widget.ArrayAdapter;
 
 /*
@@ -10,4 +11,15 @@ import android.widget.ArrayAdapter;
 * */
 public class ItensAdapter extends ArrayAdapter<Item> {
 
+    private Context context;
+    private int layoutResourceId;
+    private Item[] items;
+
+    public ItensAdapter(Context context, int layoutResourceId, Item[] listItens){
+        super(context, layoutResourceId, listItens);
+
+        this.context = context;
+        this.layoutResourceId = layoutResourceId;
+        this.items = listItens;
+    }
 }
