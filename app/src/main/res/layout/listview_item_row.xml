@@ -25,6 +25,13 @@
     <TextView
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight="70"/>
+        android:layout_weight="70"
+        android:text="@string/lbl_nome"
+        android:textColor="#660303"
+        android:gravity="center_vertical"/>
+    <!--
+        A propiedade [ android:gravity="center_vertical" ] centraliza o conteúdo do componente
+        na vertical.
+    -->
 
 </LinearLayout>
