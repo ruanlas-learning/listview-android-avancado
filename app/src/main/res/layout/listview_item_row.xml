@@ -23,6 +23,7 @@
         de 30/100 (30%).  Para isso, a propriedade 'layout_width' precisa estar com'0dp' .
      -->
     <TextView
+        android:id="@+id/txt_nome"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="70"
