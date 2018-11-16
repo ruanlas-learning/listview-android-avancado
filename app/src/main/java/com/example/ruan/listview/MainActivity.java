@@ -22,9 +22,13 @@ public class MainActivity extends AppCompatActivity {
             new Item(R.drawable.ic_launcher, "Amora")
         };
 
+        ItensAdapter itensAdapter = new ItensAdapter(this, R.layout.listview_item_row, listItens);
 
         listView = (ListView)findViewById(R.id.listView);
 
         View header = (View)getLayoutInflater().inflate(R.layout.list_header_row, null);
+
+        listView.addHeaderView(header);
+        listView.setAdapter(itensAdapter);
     }
 }
