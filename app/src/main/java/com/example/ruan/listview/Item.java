@@ -7,7 +7,7 @@ public class Item {
     public int icon;
     public String title;
 
-    public Item(){
+    public Item(int icon, String title){
         super();
         this.icon = icon;
         this.title = title;
