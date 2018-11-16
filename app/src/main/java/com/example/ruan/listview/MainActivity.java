@@ -10,6 +10,8 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
+    // Componente [ WebView ]
+
     private ListView listView;
 
     @Override
