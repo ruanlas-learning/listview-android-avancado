@@ -1,7 +1,13 @@
 package com.example.ruan.listview;
 
+import android.app.Activity;
 import android.content.Context;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 /*
 * Quando trabalhamos com componentes do tipo listView, os dados que serão exibidos na listagem
@@ -21,5 +27,21 @@ public class ItensAdapter extends ArrayAdapter<Item> {
         this.context = context;
         this.layoutResourceId = layoutResourceId;
         this.items = listItens;
+    }
+
+
+    public View getView(int position, View convertView, ViewGroup parent){
+        View row = convertView;
+        ItensHolder holder = null;
+
+        LayoutInflater layoutInflater = ((Activity)context).getLayoutInflater();
+        row = layoutInflater.inflate(this.layoutResourceId, parent, false);
+
+        return null;
+    }
+
+    static class ItensHolder{
+        public ImageView imageView;
+        public TextView textView;
     }
 }
