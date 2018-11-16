@@ -34,8 +34,18 @@ public class ItensAdapter extends ArrayAdapter<Item> {
         View row = convertView;
         ItensHolder holder = null;
 
-        LayoutInflater layoutInflater = ((Activity)context).getLayoutInflater();
-        row = layoutInflater.inflate(this.layoutResourceId, parent, false);
+        if (row == null){
+            LayoutInflater layoutInflater = ((Activity)context).getLayoutInflater();
+            row = layoutInflater.inflate(this.layoutResourceId, parent, false);
+
+            holder = new ItensHolder();
+            holder.imageView = (ImageView)row.findViewById(R.id.imageView);
+            holder.textView = (TextView)row.findViewById(R.id.txt_nome);
+
+            row.setTag(holder);
+        }else {
+            holder = (ItensHolder)row.getTag();
+        }
 
         return null;
     }
