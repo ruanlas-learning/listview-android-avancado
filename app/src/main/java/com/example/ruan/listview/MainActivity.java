@@ -13,6 +13,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Item listItens[] = new Item[];
+        new Item(R.drawable.ic_launcher, "Uva");
+
         listView = (ListView)findViewById(R.id.listView);
     }
 }

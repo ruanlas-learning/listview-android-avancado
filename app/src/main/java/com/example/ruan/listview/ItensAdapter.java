@@ -47,7 +47,11 @@ public class ItensAdapter extends ArrayAdapter<Item> {
             holder = (ItensHolder)row.getTag();
         }
 
-        return null;
+        Item item = this.items[position];
+        holder.textView.setText(item.title);
+        holder.imageView.setImageResource(item.icon);
+
+        return row;
     }
 
     static class ItensHolder{
